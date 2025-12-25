@@ -1,0 +1,139 @@
+/* ================================== */
+/* ====== INTERACTION & POLISH ====== */
+/* ================================== */
+
+/* ====== DEFAULTS ====== */
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+/* ====== HEADER ====== */
+/* ====== NAVIGATION BAR ====== */
+.nav-list li{
+  font-weight: 800;
+  padding: 8px;
+  border-radius: 20px;
+}
+
+.nav-list li:hover {
+  background-color: rgba(255, 255, 255, 0.09);
+  transform: scale(1.05);
+}
+
+/* ====== BUTTONS ====== */
+/* ====== ADD HABIT ====== */
+.habit-form button:active{
+  transform: scale(0.9);
+}
+
+/* ====== DONE BUTTON ====== */
+.habit-card button:hover{
+  background-color: rgba(255, 255, 255, 0.337);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.habit-card button:active{
+  transform: scale(0.9);
+}
+
+/* ====== HABIT CARD ====== */
+.habit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* ====== FOOTER ====== */
+#footer-el p{
+  line-height: 0.5;
+}
+/* ====== FADE-IN ANIMATION ====== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.habit-card,
+.stats-grid p {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+
+/* =============================== */
+/* ====== RESPONSIVE DESIGN ====== */
+/* =============================== */
+
+@media (max-width: 768px) {
+
+/* ====== HEADER ====== */
+  #header {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  #header h1{
+    margin: 0;
+    padding-top: 20px;
+  }
+
+/* ====== NAVIGATION BAR ====== */
+  .nav-list {
+    flex-direction: row;
+    gap: 10px;
+
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+
+ /* ====== SECTIONS ====== */
+  section {
+    padding: 18px;
+  }
+
+/* ====== BUTTON ====== */
+  #add-habit-section button{
+    padding: 5px
+  }
+
+/* ====== ADD HABIT ====== */
+  .habit-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .habit-form input,
+  .habit-form select,
+  .habit-form button {
+    width: 50%;
+  }
+
+/* ====== HABIT LIST SECTION ====== */
+  #habit-container{
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 300px;
+  }
+
+/* ====== HABIT CARDS ====== */
+  .habit-card{
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+  }
+
+/* ====== STATS SECTION ====== */
+  #stats {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+}

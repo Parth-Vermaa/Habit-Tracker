@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habit Tracker</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header id="header">
+    <h1>Habit Tracker  ☯</h1>
+
+    <nav id="navbar">
+     <ul class="nav-list">
+          <li><a href="#add-habit-section">Home</a></li>
+          <li><a href="#habit-list-section">Habits</a></li>
+          <li><a href="#stats-section">Stats</a></li>
+     </ul>
+    </nav>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+
+    <!-- ========== ADD HABIT SECTION ========== -->
+    <section id="add-habit-section">
+      <br>
+      <h2>Add New Habit</h2>
+
+      <form class="habit-form">
+          <input type="text" placeholder="Habit Name" minLength="4" maxLength="20">
+          <select>
+               <option value="" disabled selected> Frequency</option>
+               <option value="Daily">Daily</option>
+               <option value="Weekly">Weekly</option>
+          </select>
+          <button>Add Habit</button>
+      </form>
+    </section>
+
+    <!-- ========== HABIT LIST SECTION ========== -->
+    <section id="habit-list-section">
+      <br>
+      <h2>Your Habits</h2>
+
+      <div id="habit-container">
+        <div class="habit-card">
+          <h3>Exercise: 2 Hour</h3>
+          <p>Current Streak: 90 Days</p>
+          <button>Mark As Done</button>
+        </div>
+
+        <div class="habit-card">
+          <h3>Play Football: 1 hour</h3>
+          <p>Current Streak: 20 Days</p>
+          <button>Mark As Done</button>
+        </div>
+
+        <div class="habit-card">
+          <h3>Study: 4 Hour</h3>
+          <p>Current Streak: 30 Days</p>
+          <button>Mark As Done</button>
+        </div>
+
+        <div class="habit-card">
+          <h3>Read Books: 1 Hour</h3>
+          <p>Current Streak: 10 Days</p>
+          <button>Mark As Done</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STATS SECTION ========== -->
+    <section id="stats-section">
+      <br>
+      <h2>Your Progress</h2>
+      <div id="stats">
+        <p>Total Habits: 3</p>
+        <p>Completed Today: 2</p>
+        <p>Best Streak: 90 Days</p> 
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="footer">
+    <div id="footer-el">
+      <p>Habit Tracker ☯</p>
+      <p>Consistency Over Motivation © 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>
+
