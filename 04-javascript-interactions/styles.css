@@ -1,0 +1,213 @@
+/* ======= HTML ======= */
+html{
+  height: 100%;
+}
+
+/* ======= BODY ======= */
+body{
+  background: 
+  linear-gradient(rgba(27, 26, 26, 0.412)),
+  url("assets/background.jpg");
+  background-repeat: repeat;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  margin: 0;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ====== HEADER ====== */
+#header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #21252b;
+  color: rgb(255, 255, 255);
+
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.nav-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-list a{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ====== MAIN ====== */
+main{
+  flex: 1;
+}
+
+/* ====== ADD HABIT SECTION ====== */
+#add-habit-section{
+  padding:20px;
+}
+
+#add-habit-section h2{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.habit-form{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.habit-form input, .habit-form select{
+  height: 32px;
+  width: 300px;
+  padding: 4px 4px;
+  box-sizing: border-box;
+}
+
+.habit-form button{
+  background-color: #F0A202;
+  color: white;
+  font-weight: 600;
+  border: 0;
+  width: 100px;
+
+  cursor: pointer;
+}
+
+/* ====== HABIT LIST SECTION ====== */
+#habit-list-section{
+  padding: 20px;
+}
+
+#habit-list-section h2{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#habit-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 400px);
+
+  gap: 40px;
+  justify-content: center;
+
+  max-width: calc((4 * 400px) + (3 * 40px));
+  margin: 0 auto;
+}
+
+.habit-card.demo {
+  background-color: rgba(252, 6, 6, 0.704);
+  font-style: italic;
+}
+
+.habit-card{
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 0;
+
+  background-color: rgba(252, 6, 6, 0.704);
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+
+  text-shadow: -0.5px -0.5px 0 black;
+}
+
+.habit-card button{
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.211);
+  border-color: rgb(255, 255, 255);
+
+  text-shadow: -0.5px -0.5px 0 black;
+
+  border: 0;
+  border-radius: 5px;
+
+  padding: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  cursor: pointer;
+}
+
+.delete-habit {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+
+  cursor: pointer;
+  font-size: 16px;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* ====== STATS SECTION ====== */
+#stats-section{
+  padding: 20px
+}
+
+#stats-section h2{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#stats{
+  display: flex;
+  justify-content: center;
+
+  margin: 0;
+  gap: 40px;
+  padding: 20px;
+}
+
+#stats p{
+  display: flex;
+  justify-content: center;
+  flex: 1;
+
+  background-color: rgba(4, 176, 255, 0.645);
+  color: white;
+
+  text-shadow: -0.5px -0.5px 0 black;
+  
+  border-radius: 8px;
+  padding: 22px;
+
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+/* ====== FOOTER ======  */
+#footer{
+  text-align: center;
+  background-color: #21252b;
+  color: white;
+  padding: 20px;
+}
+
+
