@@ -1,23 +1,31 @@
 # 🧭 Habit Tracker
 
 ## 📄 Description
-A simple habit tracker web interface built using HTML and CSS, focused on clean structure, layout, and visual styling.
+An interactive habit tracker web application built using **HTML, CSS, and JavaScript**, focused on clean structure, meaningful interactions, and real-time habit progress tracking.
 
 ---
 
 ## 🔍 Overview
-This project presents a static habit tracker interface that visually represents habits, streaks, and basic progress statistics.  
-It emphasizes page organization, consistent styling, and responsive alignment using modern CSS techniques.
+This project implements a habit tracking interface where users can **add habits, mark them as completed, track streaks, view live statistics, and remove habits when needed**.
+
+The application emphasizes:
+- Clear UI structure
+- Thoughtful JavaScript-driven interactions
+- State derived directly from the DOM
+- Progressive enhancement from static layout to interactive system
 
 ---
 
 ## ✨ Features
-- 📌 Header with navigation links
-- 📝 Form layout for adding a habit
-- 📋 Habit cards displaying streak information
-- 📊 Progress statistics section
-- 📐 Flexbox-based layout for alignment and spacing
-- 🦶 Footer with project details
+- 📝 Add new habits through a form interface
+- ✅ Mark habits as done with toggle support
+- 🔁 Undo completion without losing previous state
+- 🔥 Track streaks per habit
+- 🏆 Calculate best streak dynamically
+- 📊 Live stats update (total habits, completed today, best streak)
+- 🗑️ Delete habits with confirmation
+- 🧪 Demo habits shown on first load, removed on first real input
+- 📱 Responsive layout with smooth hover and transition effects
 
 ---
 
@@ -28,63 +36,79 @@ Habit_Tracker/
 │  └─ index.html
 │
 ├─ 02-css-layout/
-│  ├─ index.html
 │  ├─ styles.css
 │  └─ assets/
 │     └─ background.jpg
 │
-├─ ... (additional modules will be added)
+├─ 04-javascript-interactions/
+│  ├─ index.html
+│  ├─ styles.css
+│  ├─ styles2.css
+│  └─ script.js
 │
 ├─ README.md
 ```
 
 ---
 
-## 🧩 Layout Sections
+## 🧩 Application Sections
 
 ### ⌗ Header
-- Displays the project title
-- Includes a navigation bar linking to different sections of the page
+- Displays project title
+- Navigation links for in-page sections
+- Designed for clarity and visual balance
 
 ### ➕ Add Habit Section
-- Contains an input field for habit name
-- Includes a dropdown menu for selecting habit frequency
-- Uses Flexbox for centered alignment and spacing
+- Input field for habit name
+- Frequency selector (UI-level)
+- Form submission handled via JavaScript
+- Demo habits removed on first real entry
 
 ### 📋 Habit List Section
-- Displays multiple habit cards
+- Dynamic habit cards generated using JavaScript
 - Each habit card includes:
   - 🏷️ Habit name
-  - 🔥 Current streak
-  - ✅ Action button
-- Cards are evenly sized and spaced using Flexbox
+  - 🔥 Current streak (tracked per habit)
+  - ✅ Mark-as-done toggle button
+  - ✕ Delete option (visible on hover)
+- Habit state is stored directly on the DOM element using `data-*` attributes
 
 ### 📊 Stats Section
-- Displays summary statistics such as:
+- Updates automatically on every interaction
+- Displays:
   - 📌 Total habits
-  - ✔️ Completed habits
-  - 🏆 Best streak
-- Statistics are presented in styled boxes for visual clarity
+  - ✔️ Completed today
+  - 🏆 Best streak across all habits
+- Stats are derived from current DOM state (no global counters)
 
 ### 🦶 Footer
-- Displays project and course information
-- Styled for clear separation from main content
+- Displays project identity
+- Styled to visually separate content layers
 
 ---
 
 ## 🛠️ Technologies Used
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-- 🌐 **HTML5** — Page structure and semantics
-- 🎨 **CSS3** — Styling, layout, and Flexbox
-- 🧰 **Git** — Version control
-- 🐙 **GitHub** — Repository hosting and collaboration
+- 🌐 **HTML5** — Semantic structure and layout  
+- 🎨 **CSS3** — Styling, layout, transitions, and responsiveness  
+- ⚙️ **JavaScript** — Interactions, state handling, DOM manipulation, and stats logic  
+- 🧰 **Git** — Version control  
+- 🐙 **GitHub** — Repository hosting  
+
+---
+
+## ✍️ Notes
+This project intentionally avoids frameworks to focus on **fundamentals**, clear reasoning, and understanding how UI state and logic interact at the DOM level.
+
+Future enhancements may include data persistence and backend integration.
 
 ---
 
 ## Author
-Parth Verma  
+**Parth Verma**  
 GitHub: https://github.com/Parth-Vermaa
